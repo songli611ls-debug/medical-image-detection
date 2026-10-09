@@ -1,0 +1,80 @@
+# ============================================================
+# 深度学习图像检测项目 .gitignore
+# 规则：凡是「体积大、可由代码重新生成、或含隐私」的东西都不上传
+# ============================================================
+
+# ---------- 1. 数据集（最重要：医学影像动辄几十 GB） ----------
+data/
+datasets/
+dataset/
+raw/
+images/
+labels/
+annotations/
+*.dcm
+*.nii
+*.nii.gz
+*.mhd
+*.nrrd
+*.tif
+*.tiff
+
+# ---------- 2. 模型权重与训练产物 ----------
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+*.onnx
+*.pb
+*.tflite
+*.safetensors
+weights/
+checkpoints/
+runs/
+logs/
+outputs/
+wandb/
+mlruns/
+
+# ---------- 3. Python 环境与缓存 ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.python-version
+*.egg-info/
+build/
+dist/
+
+# ---------- 4. Notebook 与实验记录 ----------
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# ---------- 5. 编辑器 / IDE ----------
+.vscode/
+.idea/
+*.swp
+*.sublime-*
+
+# ---------- 6. 操作系统垃圾文件 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 7. 密钥与隐私（医学数据尤其重要） ----------
+.env
+*.key
+*.pem
+secrets.json
+patient_info*
+
+# ============================================================
+# 例外：确实需要上传的小样例，用 ! 强制放行
+# 例如保留 3~5 张示例图方便别人跑通 demo：
+# !data/samples/
+# !data/samples/*.png
+# ============================================================
